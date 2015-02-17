@@ -293,6 +293,7 @@ Ember
 * Use `href="#"` for links that have an action.
 * Prefer dependency injection through Ember initializers over globals on window
   or namespaces.
+* Prefer sub-routes over maintaining state.
 
 Angular
 -------
