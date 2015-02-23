@@ -30,7 +30,8 @@ HTTPS
 * Use HTTPS for all web traffic.
 * Use HTTPS in the beginning; it's harder to introduce later.
 * Use HTTPS redirects for HTTP traffic.
-* Use HSTS headers to enforce HTTPS traffic.
+* Use [HSTS](http://tools.ietf.org/html/rfc6797) headers to enforce HTTPS
+  traffic.
 * Use secure cookies.
 * Avoid protocol-relative URLs.
 
