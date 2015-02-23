@@ -10,11 +10,19 @@ Security is important, and you can't practice these guidelines without
 understanding them. Question each guideline before following it yourself and
 start a discussion whenever you're in doubt.
 
-Passwords
----------
+Using Passwords
+---------------
 
 * Use a unique password for every account you create.
+* Use a tool like [pwgen](https://github.com/jbernard/pwgen) or
+  [1password](https://agilebits.com/onepassword) to generate random passwords.
+
+Accepting Passwords
+-------------------
+
 * Don't store passwords in plain text.
+* Don't hash passwords using a reversible cipher.
+* Don't hash passwords using a broken cipher, such as MD5 or SHA1.
 
 HTTPS
 -----
