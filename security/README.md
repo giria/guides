@@ -16,6 +16,8 @@ Using Passwords
 * Use a unique password for every account you create.
 * Use a tool like [pwgen](https://github.com/jbernard/pwgen) or
   [1password](https://agilebits.com/onepassword) to generate random passwords.
+* Use a tool like GnuPG to encrypt passwords if you need to share them with
+  somebody.
 
 Accepting Passwords
 -------------------
