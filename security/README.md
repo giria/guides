@@ -25,6 +25,7 @@ Accepting Passwords
 * Don't store passwords in plain text.
 * Don't hash passwords using a reversible cipher.
 * Don't hash passwords using a broken cipher, such as MD5 or SHA1.
+* Don't accept passwords or session tokens over HTTP.
 
 HTTPS
 -----
