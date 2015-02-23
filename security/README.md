@@ -7,8 +7,11 @@ Think
 -----
 
 Security is important, and you can't practice these guidelines without
-understanding them. Question each guideline before following it yourself and
-start a discussion whenever you're in doubt.
+understanding them. Make sure you understand each guideline, why it exists, and
+how to follow it.
+
+Failing to follow these guidelines will likely put you, your team, and your
+deployed services at risk of compromise or loss of privacy.
 
 Using Passwords
 ---------------
