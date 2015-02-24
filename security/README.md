@@ -54,4 +54,4 @@ PGP and GnuPG
   chat.
 * Don't share your private key with anyone.
 * Keep at least one backup of your private key and revocation certificate in a
-  secure location.
+  secure location, such as a thumb drive.
