@@ -52,6 +52,6 @@ PGP and GnuPG
 * Use ultimate trust for your own keys.
 * Use full trust for keys you have verified in person or via a secure video
   chat.
-* Don't share your private key with anyone.
+* Don't share your private key with anyone, including services like Keybase.
 * Keep at least one backup of your private key and revocation certificate in a
   secure location, such as a thumb drive.
