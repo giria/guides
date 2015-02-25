@@ -1,38 +1,52 @@
-describe SomeClass do
-  describe "#let" do
-    let(:user) { User.new(name: "John") }
+# BAD
+describe ReportPolicy do
+  let(:user) { User.new(report_ids: [1, 2]) }
+  let(:report) { Report.new(id: 2) }
 
-    context "avoid using" do
-      it "uses lets" do
-        # BAD
-        user.name = "Jane"
-        result = SomeClass.new(user).run
+  describe "#allowed?" do
+    context "when user has access to report" do
+      it "returns true" do
+        policy = ReportPolicy.new(user, report)
 
-        expect(result).to be_present
-      end
-
-      it "does not use lets" do
-        # GOOD
-        user = build_user(name: "Jane")
-
-        result = SomeClass.new(user).run
-
-        expect(result).to be_present
+        expect(policy).to be_allowed
       end
     end
 
-    context "don't re-implement" do
-      it "uses a re-implementation of let" do
-        some_variable
+    context "when user does not have access to report" do
+      it "returns false" do
+        report.id = 3
+        policy = ReportPolicy.new(user, report)
 
-        expect(true).to be_true
-      end
-
-      def some_variable
-        # BAD -- just use let, or better extract a function that allows passing
-        # the thing that is different accross the examples.
-        @some_variable ||= "some_variable"
+        expect(policy).not_to be_allowed
       end
     end
+  end
+end
+
+# GOOD
+describe ReportPolicy do
+  describe "#allowed?" do
+    context "when user has access to report" do
+      it "returns true" do
+        policy = build_policy(report_id: 2, allowed_report_ids: [1, 2])
+
+        expect(policy).to be_allowed
+      end
+    end
+
+    context "when user does not have access to report" do
+      it "returns false" do
+        policy = build_policy(report_id: 3, allowed_report_ids: [1, 2])
+
+        expect(policy).not_to be_allowed
+      end
+    end
+  end
+
+  def build_policy(report_id:, allowed_report_ids:)
+    user = instance_double("User", report_ids: allowed_report_ids)
+    report = instance_double("Report", id: report_id)
+
+    ReportPolicy.new(user, report)
   end
 end
