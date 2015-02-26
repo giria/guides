@@ -110,8 +110,8 @@ Testing
 
 * Avoid `any_instance` in rspec-mocks and mocha. Prefer [dependency injection].
 * Avoid `its`, `specify`, and `before` in RSpec.
-* Avoid `let` (or `let!`). Prefer extracting helper method, but do not
-  re-implement the functionality of `let`. [Example][avoid-let].
+* Avoid `let` (or `let!`) in RSpec. Prefer extracting helper method,
+  but do not re-implement the functionality of `let`. [Example][avoid-let].
 * Avoid using `subject` explicitly *inside of an* RSpec `it` block.
   [Example][subject-example].
 * Avoid using instance variables in tests.
